@@ -43,26 +43,28 @@ class image_manager(object):
 
     def find_duplicate_files(self, order: str = "asc"):
         full_paths = self.get_all_files_in_dir()
-        full_paths_with_timestamp = []
+        full_path_objects = []
         for full_path in full_paths:
             timestamp = os.path.getmtime(full_path)
             date_time = datetime.fromtimestamp(timestamp)
-            full_paths_with_timestamp.append(
+            full_path_objects.append(
                 {
                     "full_path": full_path,
                     "date_time": date_time,
                 }
             )
-        full_paths_with_timestamp.sort(
+        full_path_objects.sort(
             key=lambda x: x["date_time"], reverse=order == "desc"
         )
 
         hash_set = set()
-        for full_path in full_paths_with_timestamp:
+        for full_path_object in full_path_objects:
+            full_path = full_path_object['full_path']
+            date_time = full_path_object['date_time']
             body = self.get_file_body(full_path)
             v = hashlib.sha256(body).hexdigest()
             if v in hash_set:
-                print(full_path)
+                print(date_time, full_path)
             else:
                 hash_set.add(v)
         print("查找完成")
