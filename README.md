@@ -1,11 +1,11 @@
-# Image Manager
+# File Organizer
 
-A simple and easy-to-use image management tool to help you organize and clean up your image files.
+A simple and easy-to-use file organization tool to help you organize and clean up your files.
 
 ## Features
 
-- 🔍 **Find Duplicate Files**: Identify duplicate images through file content hash values
-- 📅 **Organize by Year/Month**: Automatically organize images by creation time into year/month folders
+- 🔍 **Find Duplicate Files**: Identify duplicate files through file content hash values
+- 📅 **Organize by Year/Month**: Automatically organize files by creation time into year/month folders
 - 🚀 **Simple to Use**: Interactive command-line interface with no complex configuration needed
 
 ## System Requirements
@@ -18,8 +18,8 @@ A simple and easy-to-use image management tool to help you organize and clean up
 ### 1. Download the Project
 
 ```bash
-git clone https://github.com/your-username/image-manager.git
-cd image-manager
+git clone https://github.com/your-username/file-organizer.git
+cd file-organizer
 ```
 
 ### 2. Run the Program
@@ -33,15 +33,15 @@ python main.py
 After running the program, follow the prompts to enter the following information:
 
 ### 1. Input Directory
-Enter the path to the source directory containing your image files, for example:
+Enter the path to the source directory containing your files, for example:
 ```
-/Users/username/Pictures/Photos
+/Users/username/Downloads/Files
 ```
 
 ### 2. Output Directory
 Enter the path to the directory where you want to store the processed results, for example:
 ```
-/Users/username/Pictures/Organized
+/Users/username/Documents/Organized
 ```
 
 ### 3. Select Task
@@ -63,10 +63,10 @@ The program will display three options, enter the corresponding number:
 
 ```
 Input Directory
-/Users/username/Downloads/Photos
+/Users/username/Downloads/Files
 
 Output Directory
-/Users/username/Pictures/Organized
+/Users/username/Documents/Organized
 
 1 Find duplicate files (newer files considered duplicates)
 2 Find duplicate files (older files considered duplicates)
@@ -84,10 +84,12 @@ Output Directory
 
 ## Supported File Formats
 
-The program supports all file types, not just images:
+The program supports all file types:
 - Image files: JPG, PNG, GIF, BMP, TIFF, etc.
 - Video files: MP4, AVI, MOV, etc.
 - Document files: PDF, DOC, TXT, etc.
+- Audio files: MP3, WAV, FLAC, etc.
+- Archive files: ZIP, RAR, 7Z, etc.
 - Any other file types
 
 ## Technical Details
